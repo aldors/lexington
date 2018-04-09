@@ -1,0 +1,23 @@
+{
+  "name": "lexington",
+  "version": "1.0.0",
+  "description": "\"# lexington\"",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "botkit": "^0.6.13"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldors/lexington.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aldors/lexington/issues"
+  },
+  "homepage": "https://github.com/aldors/lexington#readme"
+}
