@@ -8,5 +8,5 @@
 3.コマンドプロンプトを起動し、lexingtonフォルダの直下に移動</br>
 4.npm installを実行する</br>
 　node_modulesが生成される</br>
-5.set TOKEN=<対象のAPIキー>
-6.node ./src/main/slack_bot.js
+5.set TOKEN=<対象のAPIキー></br>
+6.node ./src/main/slack_bot.js</br>
