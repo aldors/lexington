@@ -29,17 +29,19 @@ app.get("/login", function(req, res, next){
 });
 
 app.post("/login/auth",function(req, res){
+
+    //FIXME ログインの認証機能についてはpassportを使用する
     console.log(req.body.user);
 
-    connection.query('select * from test')
-    .then(result => {
-      console.log(result.rows[0])
-      connection.end()
-    })
-    .catch(e => {
-      console.error(e.stack)
-      connection.end()
-    });
+    // connection.query('select * from test')
+    // .then(result => {
+    //   console.log(result.rows[0])
+    //   connection.end()
+    // })
+    // .catch(e => {
+    //   console.error(e.stack)
+    //   connection.end()
+    // });
 
     res.render("login/login", {});
 });
