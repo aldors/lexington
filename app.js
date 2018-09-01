@@ -2,8 +2,6 @@
 var express = require("express");
 var app = express();
 
-app.set('port', (process.env.PORT || 3000));
-
 //静的ファイル設定
 app.use(express.static(__dirname + '/static'));
 //post設定
@@ -14,7 +12,7 @@ app.set( 'views', __dirname + '/view' );
 app.set('view engine', 'ejs');
 
 //ポート設定
-var server = app.listen(app.get('port'), function(){
+var server = app.listen(3000, function(){
     console.log("Node.js is listening to PORT:" + server.address().port);
 });
 
