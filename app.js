@@ -18,6 +18,10 @@ var server = app.listen(app.get('port'), function(){
     console.log("Node.js is listening to PORT:" + server.address().port);
 });
 
+app.get("/", function(req, res, next){
+    res.render("index/index", {});
+});
+
 //ログイン画面
 app.get("/login", function(req, res, next){
     res.render("login/login", {});
