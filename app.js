@@ -43,7 +43,7 @@ app.post("/login/auth",function(req, res){
     //   connection.end()
     // });
 
-    res.render("login/login", {});
+    res.render("viewer/viewer", {});
 });
 
 //404NotFound
