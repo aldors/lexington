@@ -1,20 +1,32 @@
 <html lang="en-US">
-  <head>
+
+<head>
+  <title>Login</title>
   <meta charset="utf-8">
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
-  </head>
-  <body>
-    <div id="login">
-      <h1>チュウニズムviewer(仮)</h1>
-      <form action="/login/auth" method="post" name='form-login'>
-        <span class="fontawesome-user"></span>
-        <input type="text" id="user" name="username" placeholder="Username"/>
-        <span class="fontawesome-lock"></span>
-        <input type="password" id="pass" name="password" placeholder="Password"/>
-        <input type="submit" value="Login"/>
-      </form>
-    </div>
-  </body>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <h1 class="text-center">なんかのviewer</h1>
+  <div class="mx-auto" style="width: 500px">
+    <form action="/login/auth" method="post" name="form-login">
+      <div class="form-group">
+        <label for="username">ユーザID</label>
+        <input type="text" class="form-control" id="username" placeholder="UserName">
+      </div>
+      <div class="form-group">
+        <label for="password">パスワード</label>
+        <input type="password" class="form-control" id="password" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary mx-auto d-block">ログイン</button>
+    </form>
+  </div>
+</body>
+<footer>
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+</footer>
+
 </html>
