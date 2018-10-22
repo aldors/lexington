@@ -1,25 +1,17 @@
 var express = require('express');
 var router = express.Router();
 
-//ログイン画面
+//top画面
 router.get("/", function (req, res, next) {
-    res.redirect(302, "/login");
-});
-router.get("/login", function (req, res, next) {
-    res.render("login/login", {});
+    res.redirect(302, "/top");
 });
 
-//ログイン認証
-router.post("/login/auth", function (req, res) {
-    //FIXME ログインの認証機能についてはpassportを使用する
-    console.log(req.body.user);
-    res.redirect(302, "/viewer");
+router.get("/top", function (req, res, next) {
+    res.render("top/top", {});
 });
 
-//メインページ
-router.get("/viewer", function (req, res) {
-    res.render("viewer/viewer", {});
-});
+var login = require('./login');
+var viewer = require('./viewer');
 
 //404NotFound
 router.use(function (req, res, next) {
