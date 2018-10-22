@@ -10,19 +10,25 @@ router.get("/top", function (req, res, next) {
     res.render("top/top", {});
 });
 
-var login = require('./login');
-var viewer = require('./viewer');
+//------------ ルーター・モジュール -------------
+//route.jsは基本的にエラーハンドリング等の共通機能のみ
+//FIXME jsの単位を画面単位にする?
+router.use('/', require('./login'));
+router.use('/', require('./viewer'));
+//------------ ルーター・モジュール -------------
 
-//404NotFound
+//------------ 404NotFound -------------
 router.use(function (req, res, next) {
     res.status(404);
     res.render("error/notFound", {});
 });
+//------------ 404NotFound -------------
 
-//500InternalServerError
+//------------ 500InternalServerError -------------
 router.use(function (err, req, res, next) {
     res.status(500);
     res.end('my 500 error! : ' + err);
 });
+//------------ 500InternalServerError -------------
 
 module.exports = router;
