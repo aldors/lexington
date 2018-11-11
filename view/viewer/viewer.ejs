@@ -21,15 +21,23 @@
         </tr>
       </thead>
       <tbody>
-        <% for (var i = 0; i < 10; i++) { %>
-          <tr>
-            <td>ラブって♡ジュエリー♪えんじぇる☆ブレイク！！</td>
-            <td>master</td>
-            <td>12.7</td>
-            <td>1,008,576</td>
-            <td>14.7</td>
-          </tr>
-          <% } %>
+        <% for (var record of recordList) { %>
+        <tr>
+          <td>
+            <%= record.music_name %>
+          </td>
+          <td>
+            <%= record.difficulty_level %>
+          </td>
+          <td>
+            <%= record.music_constant %>
+          </td>
+          <td>
+            <%= record.score %>
+          </td>
+          <td>14.7</td>
+        </tr>
+        <% } %>
       </tbody>
     </table>
   </div>
