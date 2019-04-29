@@ -8,57 +8,54 @@
 </head>
 
 <body>
-
-<div class="container">
-  <h2>現在の情報</h2>
-  <table class="table table-bordered table-hover">
-      <thead>
-        <tr>
-          <th>name</th>
-          <th>称号</th>
-          <th>現在レート</th>
-          <th>最大レート</th>
-        </tr>
-      </thead>
-      <tbody>
-        <td>name</td>
-        <td>課金</td>
-        <td>15.00</td>
-        <td>15.00</td>
-      </tbody>
-      </table>
-</div>
-
-  <br>
-  <div class="container">
-    <h2>ベスト枠</h2>
-    <table class="table table-bordered table-hover">
-      <thead>
-        <tr>
-          <th>曲名</th>
-          <th>難易度</th>
-          <th>定数</th>
-          <th>スコア</th>
-          <th>レート値</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% for (var i = 0; i < 10; i++) { %>
-          <tr>
-            <td>曲名<%= i %></td>
-            <td>難易度<%= i %></td>
-            <td>譜面定数<%= i %></td>
-            <td>スコア<%= i %></td>
-            <td>レート<%= i %></td>
-          </tr>
-          <% } %>
-      </tbody>
-    </table>
+  <div class="d-flex" id="wrapper">
+    <%- include('../common/sidebar', {}) %>
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="container">
+          <h2>ベスト枠</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>曲名</th>
+                <th>難易度</th>
+                <th>定数</th>
+                <th>スコア</th>
+                <th>レート値</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (var i = 0; i < 10; i++) { %>
+              <tr>
+                <td>曲名
+                  <%= i %>
+                </td>
+                <td>難易度
+                  <%= i %>
+                </td>
+                <td>譜面定数
+                  <%= i %>
+                </td>
+                <td>スコア
+                  <%= i %>
+                </td>
+                <td>レート
+                  <%= i %>
+                </td>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
   </div>
 </body>
 
 <footer>
-    <%- include('../common/fooder', {}) %>
+  <%- include('../common/fooder', {}) %>
 </footer>
 
 </html>

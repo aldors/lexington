@@ -1,0 +1,44 @@
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>ダッシュボード</title>
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <%- include('../common/sidebar', {}) %>
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="container">
+          <h2>現在の情報</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>name</th>
+                <th>称号</th>
+                <th>現在レート</th>
+                <th>最大レート</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td>name</td>
+              <td>課金は家賃をこえなきゃ大丈夫</td>
+              <td>14.90</td>
+              <td>15.01</td>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+  </div>
+
+</body>
+
+<footer>
+  <%- include('../common/fooder', {}) %>
+</footer>
+
+</html>
