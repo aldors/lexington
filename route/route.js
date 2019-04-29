@@ -13,7 +13,12 @@ router.get("/login", function (req, res, next) {
 router.post("/login/auth", function (req, res) {
     //FIXME ログインの認証機能についてはpassportを使用する
     console.log(req.body.email);
-    res.redirect(302, "/viewer");
+    res.redirect(302, "/dashboard");
+});
+
+//ダッシュボード
+router.get("/dashboard", function (req, res) {
+    res.render("dashboard/dashboard", {});
 });
 
 //メインページ
