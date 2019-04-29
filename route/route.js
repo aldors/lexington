@@ -12,7 +12,7 @@ router.get("/login", function (req, res, next) {
 //ログイン認証
 router.post("/login/auth", function (req, res) {
     //FIXME ログインの認証機能についてはpassportを使用する
-    console.log(req.body.user);
+    console.log(req.body.email);
     res.redirect(302, "/viewer");
 });
 
